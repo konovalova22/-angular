@@ -8,15 +8,11 @@ import { Component/* , OnInit */ } from '@angular/core';
 export class AppComponent/*  implements OnInit */{
   title="ng-basics"
   name ="value"
-
-  toggle=false
-  toggle2=false
-  toggle3=false
-  
+ 
   addInput(name:string) {
     console.log(this.name)
 }
-  toggleCards(){
+ /*  toggleCards(){
     this.toggle=!this.toggle
   }
   toggleCards2(){
@@ -24,6 +20,6 @@ export class AppComponent/*  implements OnInit */{
   }
   toggleCards3(){
     this.toggle3=!this.toggle3
-  }
+  } */
 }
 
