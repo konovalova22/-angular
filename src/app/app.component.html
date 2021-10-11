@@ -1,16 +1,20 @@
 <div class="toolbar" role="banner">
-  <img
-    width="200"
+  <img 
+    width="130"
     height="60"
     alt="Logo"
-    src="https://im.kommersant.ru/ISSUES.PHOTO/REGIONS/KRASNODAR_ONLINE/2019/10/11/logo_kino_brands-02.png"
+    src="https://lh3.googleusercontent.com/proxy/Yzrwo9vYgej0yxzziJGtDlW8jPIsLJ_CxgtFpYO-Yrep5KePQmA6rx4b4ZmLGuGRjnnvM0k2haiZ5wZ4n9f3Lz4WdBiyFtgkaoyQLNkcssKNeohqK4rjoHg4EPItr8mLoavfTdUN4znd7arm"
   />
+  <mat-tab-group style="position: absolute; margin-left: 40%; margin-top: 10px;">
+    <mat-tab label="Меню"> </mat-tab>
+    <mat-tab label="Магазин"> </mat-tab>
+  </mat-tab-group>
     <div class="spacer"></div>
-    <a href="https://vk.com/ek.konovalova98" title="Vk">
+<!--     <a href="https://vk.com/ek.konovalova98" title="Vk">
       <svg id="Vk-logo" height="24" width="50" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
         <path d="M6.5 7.5H4.75c-.5 0-.6.24-.6.5 0 .46.6 2.76 2.76 5.8 1.45 2.07 3.49 3.2 5.34 3.2 1.11 0 1.25-.25 1.25-.68v-1.57c0-.5.1-.6.46-.6.26 0 .7.13 1.74 1.13 1.19 1.19 1.38 1.72 2.05 1.72h1.75c.5 0 .75-.25.6-.74-.15-.5-.72-1.2-1.47-2.05-.4-.49-1.02-1-1.2-1.26-.26-.34-.2-.49 0-.78 0 0 2.13-3 2.35-4.03.11-.37 0-.64-.53-.64H17.5a.76.76 0 00-.76.5s-.9 2.16-2.15 3.57c-.41.41-.6.54-.82.54-.1 0-.27-.13-.27-.5V8.14c0-.44-.13-.64-.5-.64h-2.75c-.28 0-.45.2-.45.4 0 .42.64.52.7 1.7v2.58c0 .57-.1.67-.32.67-.6 0-2.04-2.18-2.9-4.67-.16-.48-.33-.68-.78-.68z" fill="#fff"/>
       </svg>
-    </a>
+    </a> -->
     <a href="https://web.telegram.org/" title="telegram">
       <svg id="telegram-logo" height="24" width="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
         <path d="M22.05 1.577c-.393-.016-.784.08-1.117.235-.484.186-4.92 1.902-9.41 3.64-2.26.873-4.518 1.746-6.256 2.415-1.737.67-3.045 1.168-3.114 1.192-.46.16-1.082.362-1.61.984-.133.155-.267.354-.335.628s-.038.622.095.895c.265.547.714.773 1.244.976 1.76.564 3.58 1.102 5.087 1.608.556 1.96 1.09 3.927 1.618 5.89.174.394.553.54.944.544l-.002.02s.307.03.606-.042c.3-.07.677-.244 1.02-.565.377-.354 1.4-1.36 1.98-1.928l4.37 3.226.035.02s.484.34 1.192.388c.354.024.82-.044 1.22-.337.403-.294.67-.767.795-1.307.374-1.63 2.853-13.427 3.276-15.38l-.012.046c.296-1.1.187-2.108-.496-2.705-.342-.297-.736-.427-1.13-.444zm-.118 1.874c.027.025.025.025.002.027-.007-.002.08.118-.09.755l-.007.024-.005.022c-.432 1.997-2.936 13.9-3.27 15.356-.046.196-.065.182-.054.17-.1-.015-.285-.094-.3-.1l-7.48-5.525c2.562-2.467 5.182-4.7 7.827-7.08.468-.235.39-.96-.17-.972-.594.14-1.095.567-1.64.84-3.132 1.858-6.332 3.492-9.43 5.406-1.59-.553-3.177-1.012-4.643-1.467 1.272-.51 2.283-.886 3.278-1.27 1.738-.67 3.996-1.54 6.256-2.415 4.522-1.748 9.07-3.51 9.465-3.662l.032-.013.03-.013c.11-.05.173-.055.202-.057 0 0-.01-.033-.002-.026zM10.02 16.016l1.234.912c-.532.52-1.035 1.01-1.398 1.36z" fill="#fff"/>
@@ -19,10 +23,14 @@
 </div>
 
   <div class="fon-landing">
-    <img  
-    width="100%"
-     height="100%"
-    src="https://avatars.mds.yandex.net/get-ott/1531675/2a00000171a1467e5fcc7c94bc8a45c0972b/1747x982">
+  <img class="imgDjoker" [src]="imgDjo">
+  <p class="textDjo">Как неудачливый комик стал самым опасным человеком в Готэме. Бенефис Хоакина Феникса и «Оскар» за саундтрек</p>
+  <p class="price"> от 199р</p>
+  <div class="example-button-row">
+    <button mat-button color="primary">Купить и смотреть</button>
+  </div>
+  <img style="display: flex;" width="100%" height="100%" [src]="imgUrl">
+    
   </div>
 
 <mat-tab-group class="color-tab" animationDuration="2000ms">
@@ -30,17 +38,33 @@
       <h2 style="color: rgb(255, 255, 255); text-align: center;">Популярные фильмы</h2>  
       <div class="column-otz">
         <h3>Дюна (2021)</h3>
+        <div class="example-flex-container">
+          <button mat-icon-button color="warn" aria-label="Example icon-button with a heart icon">
+            <mat-icon >favorite</mat-icon>
+          </button>
+        </div>
         <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/9eb762d6-4cdd-464f-9937-aebf30067acc/300x450">
+        
          <p>Наследник знаменитого дома Атрейдесов Пол отправляется вместе с семьей на одну из самых опасных планет во Вселенной — Арракис. Здесь нет ничего, кроме песка, палящего солнца, гигантских чудовищ и основной причины межгалактических конфликтов — невероятно ценного ресурса, который называется меланж. В результате захвата власти Пол вынужден бежать и скрываться, и это становится началом его эпического путешествия. Враждебный мир Арракиса приготовил для него множество тяжелых испытаний, но только тот, кто готов взглянуть в глаза своему страху, достоин стать избранным.</p>
         </div>
       <div class="column-otz">
         <h3>Веном 2 (2021)</h3>
+        <div class="example-flex-container">
+          <button mat-icon-button color="warn" aria-label="Example icon-button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </div>
         <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/58a86807-b6e2-45dc-8780-c38f24e6a4ea/300x450">
          <p>Более чем через год после тех событий журналист Эдди Брок пытается приспособиться к жизни в качестве хозяина инопланетного симбиота Венома, который наделяет его сверхчеловеческими способностями. Брок пытается возродить свою карьеру и берет интервью у серийного убийцы Клетуса Касади, который по воле случая становится хозяином Карнажа и сбегает из тюрьмы после неудавшейся казни.</p>
          
       </div>
       <div class="column-otz">
         <h3>Главный герой (2021)</h3>
+        <div class="example-flex-container">
+          <button mat-icon-button color="warn" aria-label="Example icon-button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </div>
         <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/0bbaf4fc-a710-48d0-a2e0-25612b0df8d4/300x450">
          <p>У сотрудника крупного банка всё идёт по накатанной, пока однажды он не выясняет, что окружающий его мир — это часть огромной видеоигры, а сам он в ней — всего лишь второстепенный персонаж. Хватит ли у него духу переписать свой код, обратить на себя внимание прекрасной девушки и, наконец, спасти мир? Одним словом, получится ли из него главный герой?</p>
         
@@ -50,18 +74,33 @@
       <h2 style="color: rgb(255, 255, 255); text-align: center;">Популярные сериалы</h2>     
       <div class="column-otz">
         <h3>Игра в кальмара (сериал 2021)</h3>
+        <div class="example-flex-container">
+          <button mat-icon-button color="warn" aria-label="Example icon-button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </div>
         <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/f485e241-0758-4a9f-a4eb-98e586de8a37/300x450">
          <p>Сон Ги-хун уже немолод, разведён, по уши погряз в долгах и сидит на шее у старенькой матери. Даже выигранные на скачках деньги в его руках долго не задерживаются, и однажды он встречает в метро загадочного незнакомца, который сначала предлагает сыграть в детскую игру, а затем вручает Ги-хуну немалую сумму и визитку. Но радость мужчины сменятся отчаянием, когда он узнаёт, что бывшая жена с новым мужем собираются увезти его дочь в Америку. Он звонит по номеру с визитки и становится последним участником тайных игр на выживание с призом в 40 миллионов долларов. Среди товарищей по несчастью оказываются его друг детства — прогоревший финансист, бандит, смертельно больной старик, северокорейская перебежчица, иммигрант из Пакистана и многие другие отчаянно нуждающиеся в деньгах.</p>
          
       </div>
       <div class="column-otz">
         <h3>Бесстыжие (сериал 2011 – 2021)</h3>
+        <div class="example-flex-container">
+          <button mat-icon-button color="warn" aria-label="Example icon-button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </div>
         <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/df76fcb4-ba29-4639-ba82-d096c91cca4a/300x450">
          <p>О взбалмошной многодетной семье Галлагеров и их соседях, которые веселятся, попадают в самые невероятные ситуации и пытаются выжить в этом мире всеми возможными средствами, но при этом как можно меньше работая.</p>
          
       </div>
       <div class="column-otz">
         <h3>Рик и Морти (сериал 2013 – ...)</h3>
+        <div class="example-flex-container">
+          <button mat-icon-button color="warn" aria-label="Example icon-button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </div>
         <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/d26765de-72ed-43ba-909c-aacace6d6da1/300x450">
          <p>В центре сюжета - школьник по имени Морти и его дедушка Рик. Морти - самый обычный мальчик, который ничем не отличается от своих сверстников. А вот его дедуля занимается необычными научными исследованиями и зачастую полностью неадекватен. Он может в любое время дня и ночи схватить внука и отправиться вместе с ним в безумные приключения с помощью построенной из разного хлама летающей тарелки, которая способна перемещаться сквозь межпространственный тоннель. Каждый раз эта парочка оказывается в самых неожиданных местах и самых нелепых ситуациях.</p>
          
@@ -71,6 +110,11 @@
       <h2 style="color: rgb(255, 255, 255); text-align: center;">Новинки</h2>     
       <div class="column-otz">
         <h3>Контакт (сериал 2021 – ...)</h3>
+        <div class="example-flex-container">
+          <button mat-icon-button color="warn" aria-label="Example icon-button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </div>
         <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/518d3f71-e32c-408c-adaf-295c2be5694c/300x450">
          <p>От бывшего опера Глеба Барнашова ушла жена. Личную драму он гасит алкоголем, и за это его выкинули из убойки в отдел по делам несовершеннолетних. И это для Барнашова кромешный ад: он абсолютно не понимает современных детей, а особенно — свою дочь Юльку. Из всех трудных подростков для него она — самый трудный.
     
@@ -80,20 +124,28 @@
       <div class="column-otz">
         <h3>
           Семейка Аддамс: Горящий тур (2021)</h3>
+          <div class="example-flex-container">
+            <button mat-icon-button color="warn" aria-label="Example icon-button with a heart icon">
+              <mat-icon>favorite</mat-icon>
+            </button>
+          </div>
         <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/a7ffd20e-d7d2-4475-8b14-437ebee1f5b3/300x450">
          <p>Что делать, если в доме поселилось настоящее исчадие ада, а именно два подростка? Срочно планировать самый жуткий отпуск! Мартиша, Гомес, Уэнсдей, Пагсли и дядя Фестер загружаются в семейный походный катафалк, чтобы отправиться навстречу новым приключениям и чудаковатым друзьям, от которых волосы встанут дыбом. В этой поездке семейка Аддамс сплотится намертво! Если, конечно, останутся выжившие…</p>
          
       </div>
       <div class="column-otz">
         <h3>Клаустрофобы 2: Лига выживших (2021)</h3>
+        <div class="example-flex-container">
+          <button mat-icon-button color="warn" aria-label="Example icon-button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </div>
         <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/6fc4fb3b-1ef5-4a71-96ec-235a3492460d/300x450">
          <p>Зои и Бэн пытаются найти тех, кто заставил их принять участие в том садистском испытании, но вместе с другими четырьмя победителями смертельно опасных квестов вновь оказываются в игре. Прежние задания покажутся им сущими пустяками по сравнению с тем, что их поджидает на этот раз: игра стала еще опаснее и безжалостнее, а шансы на выживание стремятся к нулю.</p>
         
       </div>
     </mat-tab>
 </mat-tab-group>
-
-
 
 
 
@@ -231,6 +283,7 @@
         </tr>
     </tbody> -->
   </div>
+  
 
 
 
@@ -283,30 +336,21 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: #0466c9;
+    background-color: #160672;
     color: white;
     font-weight: 600;
+   
   }
 
   .toolbar img {
     margin: 0 16px;
-  }
-
-  .toolbar #Vk-logo {
-    height: 40px;
-    margin: 0 8px;
+    margin-left: 5%;
   }
 
   .toolbar #telegram-logo{
     height: 40px;
     margin: 0 16px;
   }
-
-  .toolbar #Vk-logo:hover,
-  .toolbar #telegram-logo:hover {
-    opacity: 0.8;
-  }
-
   .content {
     display: flex;
     margin: 82px auto 32px;
@@ -495,15 +539,64 @@
     justify-content: center;
     color: white;
     font-size: 17px;
+    
+}
+.column-otz h3{
+  margin-bottom: -10px;
 }
   .color-tab{
     background-color: rgb(0, 0, 0);
     margin-top: 0 auto;
   }
-  .fon-landing{
 
+  .imgDjoker{
+    display: flex;
+    position: absolute;
+    width: 30%;
+    height: auto;
+    margin-top: 8%;
+    margin-left: 5%;
   }
-  
+  .textDjo{
+    display: flex;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    margin-left: 5%;
+    margin-top: 25%;
+    width: 30%;
+    height: auto;
+    line-height: 1.5;
+  }
+  .example-button-row {
+    display: flex;
+    position: absolute;
+    background: #df5a02;
+    margin-left: 5%;
+    width: auto;
+    height: auto;
+    margin-top: 38%;
+    align-items: center;
+    justify-content: center;
+}
+.mat-button.mat-primary{
+  color: white;
+  font-size: 25px;
+}
+.price{
+  display: flex;
+    position: absolute;
+    color: rgb(255, 110, 25);
+    font-size: 300%;
+    margin-left: 5%;
+    margin-top: 35%;
+    width: 25%;
+    height: auto;
+    font-weight: bold;
+}
+.example-flex-container{
+margin-left: 80%;
+}
   @media screen and (max-width: 575px) {
     svg#rocket-smoke {
       display: none;
