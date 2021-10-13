@@ -1,0 +1,17 @@
+.fon {
+  display: flex;
+}
+.main {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-color: rgb(15, 15, 15);
+}
+/* .slider {
+  -webkit-filter: brightness(40%);
+  filter: brightness(40%);
+  background-color: black;
+  display: flex;
+}
+ */
