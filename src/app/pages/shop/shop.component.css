@@ -13,7 +13,6 @@
   display: inline-block;
   position: absolute;
   text-align: center;
-  margin-top: 100px;
   color: white;
 }
 .text_content h1 {
@@ -53,6 +52,17 @@
 }
  */
 
-.splide {
-  height: 150px;
+.splide__slide img {
+  width: 10%;
+  height: auto;
+  padding: 20px;
+  top: 10;
+  bottom: 20;
+}
+.splide__slide {
+  opacity: 0.3;
+}
+
+.splide__slide.is-active {
+  opacity: 1;
 }

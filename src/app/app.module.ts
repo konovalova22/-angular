@@ -10,10 +10,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainComponent } from './pages/main/main.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ShopComponent } from './pages/shop/shop.component';
+import { PostComponent } from './pages/main/post/post.component';
 /* import { FormComponent } from './form/form.component'; */
 
 @NgModule({
-  declarations: [AppComponent, MainComponent, ShopComponent],
+  declarations: [AppComponent, MainComponent, ShopComponent, PostComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,

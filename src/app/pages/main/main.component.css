@@ -46,22 +46,6 @@
   height: auto;
   font-weight: bold;
 }
-.column-otz {
-  width: 30%;
-  align-items: center;
-  text-align: center;
-  margin: 30px 30px;
-  display: inline-table;
-  justify-content: center;
-  color: white;
-  font-size: 17px;
-}
-.column-otz h3 {
-  margin-bottom: -10px;
-}
-.example-flex-container {
-  margin-left: 80%;
-}
 .color-tab {
   background-color: black;
 }
@@ -212,6 +196,10 @@ svg#clouds {
     right: 120px;
     transform: rotate(-5deg);
   }
+}
+.title-group {
+  color: white;
+  text-align: center;
 }
 
 @media screen and (max-width: 575px) {

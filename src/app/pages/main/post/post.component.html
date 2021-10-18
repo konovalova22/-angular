@@ -1,0 +1,16 @@
+<div class="column-otz">
+  <h3>{{ post?.name }} ({{ post?.year }})</h3>
+  <div class="example-flex-container">
+    <button
+      (click)="onClickFavoriteButton()"
+      mat-icon-button
+      [color]="isLiked ? 'warn' : ''"
+    >
+      <mat-icon>favorite</mat-icon>
+    </button>
+  </div>
+  <img [src]="post?.imgUrl" />
+  <p>
+    {{ post?.text }}
+  </p>
+</div>
