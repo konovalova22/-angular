@@ -6,9 +6,13 @@
   margin-top: 8%;
   margin-left: 5%;
 }
-.textDjo {
-  display: flex;
+.text_content {
+  display: inline-block;
   position: absolute;
+  text-align: left;
+  width: 100%;
+}
+.textDjo {
   color: rgb(255, 255, 255);
   font-size: 22px;
   margin-left: 5%;
@@ -18,13 +22,12 @@
   line-height: 1.5;
 }
 .example-button-row {
-  display: flex;
-  position: absolute;
   background: #df5a02;
   margin-left: 5%;
+  margin-top: 8%;
+  padding: 8px;
   width: auto;
   height: auto;
-  margin-top: 38%;
   align-items: center;
   justify-content: center;
 }
@@ -38,7 +41,7 @@
   color: rgb(255, 110, 25);
   font-size: 300%;
   margin-left: 5%;
-  margin-top: 35%;
+  margin-top: 5%;
   width: 25%;
   height: auto;
   font-weight: bold;
@@ -68,7 +71,7 @@
 }
 .fon-landing {
   display: flex;
-  line-height: 0;
+  justify-content: left;
 }
 .content {
   display: flex;
