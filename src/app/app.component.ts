@@ -19,7 +19,7 @@ export class AppComponent /*  implements OnInit */ {
       label: 'Мое кино',
     },
     {
-      link: './shop',
+      link: 'shop',
       label: 'Магазин',
     },
   ];

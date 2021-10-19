@@ -11,119 +11,93 @@
       *ngFor="let link of navLinks"
       [routerLink]="link.link"
       routerLinkActive
-      #rla="routerLinkActive"
-      [active]="rla.isActive"
     >
       {{ link.label }}</a
     >
   </nav>
   <div class="spacer"></div>
-  <a href="https://web.telegram.org/" title="telegram">
-    <svg
-      id="telegram-logo"
-      height="24"
-      width="24"
-      data-name="Logo"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="#fff"
-    >
-      <path
-        d="M22.05 1.577c-.393-.016-.784.08-1.117.235-.484.186-4.92 1.902-9.41 3.64-2.26.873-4.518 1.746-6.256 2.415-1.737.67-3.045 1.168-3.114 1.192-.46.16-1.082.362-1.61.984-.133.155-.267.354-.335.628s-.038.622.095.895c.265.547.714.773 1.244.976 1.76.564 3.58 1.102 5.087 1.608.556 1.96 1.09 3.927 1.618 5.89.174.394.553.54.944.544l-.002.02s.307.03.606-.042c.3-.07.677-.244 1.02-.565.377-.354 1.4-1.36 1.98-1.928l4.37 3.226.035.02s.484.34 1.192.388c.354.024.82-.044 1.22-.337.403-.294.67-.767.795-1.307.374-1.63 2.853-13.427 3.276-15.38l-.012.046c.296-1.1.187-2.108-.496-2.705-.342-.297-.736-.427-1.13-.444zm-.118 1.874c.027.025.025.025.002.027-.007-.002.08.118-.09.755l-.007.024-.005.022c-.432 1.997-2.936 13.9-3.27 15.356-.046.196-.065.182-.054.17-.1-.015-.285-.094-.3-.1l-7.48-5.525c2.562-2.467 5.182-4.7 7.827-7.08.468-.235.39-.96-.17-.972-.594.14-1.095.567-1.64.84-3.132 1.858-6.332 3.492-9.43 5.406-1.59-.553-3.177-1.012-4.643-1.467 1.272-.51 2.283-.886 3.278-1.27 1.738-.67 3.996-1.54 6.256-2.415 4.522-1.748 9.07-3.51 9.465-3.662l.032-.013.03-.013c.11-.05.173-.055.202-.057 0 0-.01-.033-.002-.026zM10.02 16.016l1.234.912c-.532.52-1.035 1.01-1.398 1.36z"
-        fill="#fff"
-      />
-    </svg>
-  </a>
+  <a [routerLink]="''">Войти</a>
 </div>
-
 <router-outlet></router-outlet>
-
-<style>
-  /*   :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    color: #333;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  } */
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 8px 0;
-  }
-
-  p {
-    margin: 0;
-  }
-
-  .spacer {
-    flex: 1;
-  }
-
-  .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #160672;
-    color: white;
-    font-weight: 600;
-  }
-
-  .toolbar img {
-    margin-left: 5%;
-    margin-right: 20%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .toolbar #telegram-logo {
-    height: 40px;
-    margin: 30px;
-  }
-
-  /*   svg.material-icons {
-    height: 24px;
-    width: auto;
-  }
-
-  svg.material-icons:not(:last-child) {
-    margin-right: 8px;
-  }
-
-
-
-  svg#rocket {
-    width: 80px;
-    position: absolute;
-    left: -10px;
-    top: -24px;
-  }
-
-  svg#rocket-smoke {
-    height: calc(100vh - 95px);
-    position: absolute;
-    top: 10px;
-    right: 180px;
-    z-index: -10;
-  } */
-
-  /*   a,
-  a:visited,
-  a:hover {
-    color: #1976d2;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #125699;
-  } */
-</style>
+<div class="footer">
+  <div class="Footer_social">
+    <a
+      class="svg"
+      href="#"
+      target="_blank"
+      data-tid="b0f04352 8f940e7b"
+      data-tid-prop="8f940e7b"
+      ><svg
+        width="2.4rem"
+        height="2.4rem"
+        viewBox="0 0 24 24"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        data-tid="857d69d4"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M22.463 6.823C22.558 6.376 22.347 6.125 21.848 6.125H19.333C18.757 6.125 18.546 6.358 18.373 6.697C18.373 6.697 17.013 9.397 15.36 11.097C14.828 11.647 14.558 11.812 14.265 11.812C14.029 11.812 13.92 11.629 13.92 11.132V6.788C13.92 6.18 13.843 6.001 13.305 6.001H9.274C8.967 6.001 8.774 6.167 8.774 6.394C8.774 6.967 9.715 7.096 9.715 8.648V11.848C9.715 12.493 9.677 12.743 9.351 12.743C8.487 12.743 6.433 9.971 5.281 6.823C5.051 6.18 4.801 6 4.148 6H1.634C1.269 6 1 6.232 1 6.572C1 7.198 1.787 10.095 4.878 13.976C6.95 16.587 9.678 18 12.134 18C13.632 18 13.996 17.768 13.996 17.177V15.174C13.996 14.674 14.208 14.459 14.515 14.459C14.86 14.459 15.47 14.562 16.895 15.872C18.585 17.374 18.7 18 19.621 18H22.443C22.731 18 23 17.875 23 17.428C23 16.838 22.174 15.782 20.907 14.531C20.389 13.887 19.544 13.189 19.276 12.867C18.892 12.492 19.007 12.277 19.276 11.884C19.276 11.884 22.174 8.074 22.463 6.823Z"
+          fill="white"
+        ></path></svg></a
+    ><a
+      class="svg"
+      href="#"
+      target="_blank"
+      data-tid="b0f04352 8f940e7b"
+      data-tid-prop="8f940e7b"
+      ><svg
+        width="2.4rem"
+        height="2.4rem"
+        viewBox="0 0 24 24"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        data-tid="749749f4"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M20.9636 4.56353L18.1225 19.2404C18.1225 19.2404 17.7251 20.2582 16.6325 19.7696L12.59 16.5942L9.99675 19.0167C9.99675 19.0167 9.79398 19.1743 9.57226 19.0756L10.0688 14.5757L10.0856 14.5891L10.0961 14.4973C10.0961 14.4973 17.3676 7.80019 17.6656 7.51518C17.9636 7.23017 17.8643 7.1691 17.8643 7.1691C17.8841 6.82309 17.3279 7.1691 17.3279 7.1691L7.69208 13.4388L7.69205 13.4388L3.67883 12.0546C3.67883 12.0546 3.06295 11.8307 3.00335 11.3422C2.94375 10.8536 3.69868 10.5889 3.69868 10.5889L19.6523 4.17672C19.6523 4.17672 20.9636 3.58643 20.9636 4.56353Z"
+          fill="white"
+        ></path></svg></a
+    ><a
+      class="svg"
+      href="#"
+      target="_blank"
+      data-tid="b0f04352 8f940e7b"
+      data-tid-prop="8f940e7b"
+      ><svg
+        width="2.4rem"
+        height="2.4rem"
+        viewBox="0 0 24 24"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        data-tid="2f841b34"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M7.5 3C5.01472 3 3 5.01472 3 7.5V16.5C3 18.9853 5.01472 21 7.5 21H16.5C18.9853 21 21 18.9853 21 16.5V7.5C21 5.01472 18.9853 3 16.5 3H7.5ZM7 12C7 14.7614 9.23858 17 12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12ZM12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15ZM18 6C18 6.55228 17.5523 7 17 7C16.4477 7 16 6.55228 16 6C16 5.44772 16.4477 5 17 5C17.5523 5 18 5.44772 18 6Z"
+          fill="white"
+        ></path>
+      </svg>
+    </a>
+  </div>
+  <h2>Мы всегда готовы Вам помочь.</h2>
+  <a href="#">Задать вопрос</a>
+  <div class="footer_coruption">
+    <p>
+      ООО «Кинопоиск», адрес местонахождения: 115035, Россия, г. Москва, ул.
+      Садовническая, д. 82, стр. 2, пом. 9А01
+    </p>
+    <p>Адрес для обращений пользователей: kinopoisk@support.yandex.ru</p>
+    <p>
+      © 2003–2021, КиноПоиск, может содержать информацию, не предназначенную для
+      несовершеннолетних
+    </p>
+  </div>
+</div>

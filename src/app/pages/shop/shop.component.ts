@@ -7,12 +7,81 @@ import Splide from '@splidejs/splide';
   styleUrls: ['./shop.component.css'],
 })
 export class ShopComponent implements OnInit, AfterViewInit {
-  imgUrl =
-    'https://www.iphones.ru/wp-content/uploads/2020/02/FCFA3EDE-5D55-4B02-85AF-0C6272C394EB.jpeg';
+  public filmUrls: string[] = [
+    'https://avatars.mds.yandex.net/get-ott/239697/2a0000017bd0bbbb8f1712cf52f8145fb37c/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1531675/2a0000017c27ba1217835feb7fcd44fbe30b/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1531675/2a0000017bd07f7ef8268383c31b5dfc6bbc/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1534341/2a0000017b88a29f580d61409435fa08b356/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1672343/2a0000017ba24efc5aac1c98f13cc6ac981f/375x234',
+    'https://avatars.mds.yandex.net/get-ott/239697/2a0000017bd0bbbb8f1712cf52f8145fb37c/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1531675/2a0000017c27ba1217835feb7fcd44fbe30b/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1531675/2a0000017bd07f7ef8268383c31b5dfc6bbc/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1534341/2a0000017b88a29f580d61409435fa08b356/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1672343/2a0000017ba24efc5aac1c98f13cc6ac981f/375x234',
+    'https://avatars.mds.yandex.net/get-ott/239697/2a0000017bd0bbbb8f1712cf52f8145fb37c/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1531675/2a0000017c27ba1217835feb7fcd44fbe30b/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1531675/2a0000017bd07f7ef8268383c31b5dfc6bbc/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1534341/2a0000017b88a29f580d61409435fa08b356/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1672343/2a0000017ba24efc5aac1c98f13cc6ac981f/375x234',
+    'https://avatars.mds.yandex.net/get-ott/239697/2a0000017bd0bbbb8f1712cf52f8145fb37c/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1531675/2a0000017c27ba1217835feb7fcd44fbe30b/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1531675/2a0000017bd07f7ef8268383c31b5dfc6bbc/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1534341/2a0000017b88a29f580d61409435fa08b356/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1672343/2a0000017ba24efc5aac1c98f13cc6ac981f/375x234',
+    'https://avatars.mds.yandex.net/get-ott/239697/2a0000017bd0bbbb8f1712cf52f8145fb37c/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1531675/2a0000017c27ba1217835feb7fcd44fbe30b/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1531675/2a0000017bd07f7ef8268383c31b5dfc6bbc/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1534341/2a0000017b88a29f580d61409435fa08b356/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1672343/2a0000017ba24efc5aac1c98f13cc6ac981f/375x234',
+  ];
+
+  public serialUrls: string[] = [
+    'https://avatars.mds.yandex.net/get-ott/1534341/2a000001786b5a53fb4f61b78f14b88aabda/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1648503/2a000001700b64e69cd4aff4805d9420a69f/375x234',
+    'https://avatars.mds.yandex.net/get-ott/223007/2a0000017802c0f157fa8afd768d8d10200b/375x234',
+    'https://avatars.mds.yandex.net/get-ott/200035/2a00000177bb06d7851b6fd102824618bbfb/375x234',
+    'https://avatars.mds.yandex.net/get-ott/2419418/2a000001786a16665570787d7c4f96fa3ba1/375x234',
+  ];
+
+  public multfilmUrls: string[] = [
+    'https://avatars.mds.yandex.net/get-ott/200035/2a0000017213259bf946effd48c34adeed97/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1531675/2a0000017b3ea2772669144d6e17a8d34213/375x234',
+    'https://avatars.mds.yandex.net/get-ott/1534341/2a00000171a640ec6fd6dec90cb11de97325/375x234',
+    'https://avatars.mds.yandex.net/get-ott/236744/2a0000017c180e5ff1a2264de2dbc6c1b52e/375x234',
+    'https://avatars.mds.yandex.net/get-ott/2439731/2a0000017aedc5e48891f8780c46f293773d/375x234',
+  ];
+
+  private filmSlider: Splide | null = null;
+  private filmOtherSlider: Splide | null = null;
+
   constructor() {}
 
   ngOnInit(): void {}
   ngAfterViewInit(): void {
-    new Splide('.splide').mount();
+    this.initSliderFilms();
+    this.initSliderOtherFilms();
+  }
+
+  public onAddFilmClick() {
+    this.filmUrls.splice(
+      0,
+      0,
+      'https://avatars.mds.yandex.net/get-ott/200035/2a0000017213259bf946effd48c34adeed97/375x234'
+    );
+    this.initSliderFilms();
+  }
+
+  private initSliderFilms() {
+    this.filmSlider?.destroy();
+    this.filmSlider = new Splide('.splide', {
+      perPage: 5,
+    }).mount();
+  }
+
+  private initSliderOtherFilms() {
+    this.filmOtherSlider?.destroy();
+    this.filmOtherSlider = new Splide('.splides', {
+      perPage: 5,
+    }).mount();
   }
 }
