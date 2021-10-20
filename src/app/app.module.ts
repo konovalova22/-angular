@@ -4,6 +4,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,6 +24,7 @@ import { PostComponent } from './pages/main/post/post.component';
     MatIconModule,
     MatButtonModule,
     MatGridListModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent],
