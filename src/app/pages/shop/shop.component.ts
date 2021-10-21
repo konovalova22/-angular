@@ -1,6 +1,14 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, Inject } from '@angular/core';
 import Splide from '@splidejs/splide';
-
+import {
+  MatDialog,
+  MatDialogRef,
+  MAT_DIALOG_DATA,
+} from '@angular/material/dialog';
+export interface DialogData {
+  animal: string;
+  name: string;
+}
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
@@ -38,11 +46,25 @@ export class ShopComponent implements OnInit, AfterViewInit {
     'https://avatars.mds.yandex.net/get-ott/212840/2a00000171a63e09e4489969ce4c31eb8b1a/375x234',
   ];
 
-
   private filmSlider: Splide | null = null;
   private filmOtherSlider: Splide | null = null;
 
-  constructor() {}
+  public animal: string | null = null;
+  public name: string | null = null;
+
+  constructor(public dialog: MatDialog) {}
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+      width: '250px',
+      data: { name: this.name, animal: this.animal },
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
+  }
 
   ngOnInit(): void {}
   ngAfterViewInit(): void {
@@ -51,22 +73,13 @@ export class ShopComponent implements OnInit, AfterViewInit {
   }
 
   public onAddFilmClick(): void {
-     /* this.filmUrls.splice(
+    this.filmUrls.splice(
       0,
       0,
-      
+
       'https://avatars.mds.yandex.net/get-ott/200035/2a0000017213259bf946effd48c34adeed97/375x234'
     );
-    this.initSliderFilms();  */
- prompt('Введите адрес URL-картинки','https://avatars.mds.yandex.net/get-ott/200035/2a0000017213259bf946effd48c34adeed97/375x234')
-       
-     this.filmUrls.splice(
-        0,
-        0,
-        'https://avatars.mds.yandex.net/get-ott/200035/2a0000017213259bf946effd48c34adeed97/375x234'
-        
-      );
-      this.initSliderFilms();
+    this.initSliderFilms();
   }
 
   private initSliderFilms() {
@@ -81,5 +94,19 @@ export class ShopComponent implements OnInit, AfterViewInit {
     this.filmOtherSlider = new Splide('.splides', {
       perPage: 5,
     }).mount();
+  }
+}
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: 'dialog-overview-example-dialog.html',
+})
+export class DialogOverviewExampleDialog {
+  constructor(
+    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData
+  ) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 }
