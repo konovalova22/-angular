@@ -49,7 +49,7 @@ export class ShopComponent implements OnInit, AfterViewInit {
   private filmSlider: Splide | null = null;
   private filmOtherSlider: Splide | null = null;
 
-  public animal: string | null = null;
+  public animal: string = '';
   public name: string | null = null;
 
   constructor(public dialog: MatDialog) {}
@@ -63,6 +63,7 @@ export class ShopComponent implements OnInit, AfterViewInit {
     dialogRef.afterClosed().subscribe((result) => {
       console.log('The dialog was closed');
       this.animal = result;
+      this.onAddFilmClick();
     });
   }
 
@@ -77,7 +78,7 @@ export class ShopComponent implements OnInit, AfterViewInit {
       0,
       0,
 
-      'https://avatars.mds.yandex.net/get-ott/200035/2a0000017213259bf946effd48c34adeed97/375x234'
+      this.animal
     );
     this.initSliderFilms();
   }
